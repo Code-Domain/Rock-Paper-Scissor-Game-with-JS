@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Rock, Paper, Scissors</title>
+  <script src="script.js" defer></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;600&family=PT+Sans:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Background */
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1a0f3d, #060014);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'PT Sans', sans-serif;
+  padding: 1rem;
+}
+
+/* Small title */
+h3 {
+  position: absolute;
+  top: 1.5rem;
+  color: #cfcfcf;
+  letter-spacing: 2px;
+  font-size: clamp(0.8rem, 2vw, 2rem);
+}
+
+/* Main Card */
+.main-container {
+  width: min(90vw, 760px);
+  height: min(80vh, 600px);
+  background: rgba(30, 20, 60, 0.95);
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+}
+
+/* Status text */
+.status-head-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.status-head-wrapper h1 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  color: white;
+  text-align: center;
+}
+
+/* Move display */
+.move-display {
+  display: flex;
+  justify-content: space-between;
+  color: #dcdcdc;
+  font-size: clamp(0.9rem, 3vw, 1.2rem);
+}
+
+/* Buttons area */
+.game-button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Buttons */
+button {
+  flex: 1;
+  padding: 0.9rem;
+  background: #1f8a78;
+  border: none;
+  border-radius: 12px;
+  color: white;
+  font-size: clamp(0.8rem, 2.5vw, 1rem);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* 📱 Mobile phones */
+@media (max-width: 480px) {
+  .main-container {
+    height: auto;
+    padding: 1.5rem 1rem;
+  }
+
+  .game-button-wrapper {
+    flex-direction: column;
+  }
+}
+
+/* 📲 Tablets */
+@media (min-width: 481px) and (max-width: 768px) {
+  .main-container {
+    width: 90vw;
+  }
+}
+
+
+  </style>
+</head>
+
+<body>
+  <h3 id="title-small">Rock Paper Scissors</h3>
+  <div class="main-container">
+    <span class="status-head-wrapper">
+      <h1 id="status-head"> </h1>
+    </span>
+    <div class="move-display">
+      <h2></h2>
+      <h2></h2>
+
+    </div>
+    <div class="game-button-wrapper">
+      <button id="rock-button" type="button"> </button>
+      <button id="paper-button" type="button"> </button>
+      <button id="scissors-button" type="button"> </button>
+    </div>
+  </div>
+</body>
+<script src = "script.js"></script>
+</html>
